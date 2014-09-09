@@ -1,7 +1,7 @@
 XORshift.js
 ===========
 
-simple implementation of the XORshift PRNG (Only the XORshift128 method at the moment, but I plan to add more) in JavaScript.
+simple implementation of the [XORshift](http://en.wikipedia.org/wiki/Xorshift) PRNG (Only the XORshift128 method at the moment, but I plan to add more) in JavaScript.
 
 Example
 -------
