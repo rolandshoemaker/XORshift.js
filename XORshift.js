@@ -12,14 +12,18 @@ for (j = 0; j<257; j++) {
     sbox[j] = Math.floor(Math.random()*10000000000)
 }
 
-function XORseed(i) {
+function XORseed(i, offset) {
 	x = sbox[i]^i
 	y = sbox[(i+64)%256]^i
 	z = sbox[(i+128)%256]^i
 	w = sbox[(i+192)%256]^i
+	for (k=0;k<offset;k++) {
+		XORshift128()
+	}
 }
 
-XORseed(Math.floor(Math.random() * (256 - 1 + 1))) // 0..256
+// 0..256
+// XORseed(Math.floor(Math.random() * (256 - 1 + 1)))
 
 function XORshift128() {
 	var t = x^(x<<11);
