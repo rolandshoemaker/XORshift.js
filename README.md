@@ -5,14 +5,11 @@ simple implementation of the [XORshift](http://en.wikipedia.org/wiki/Xorshift) P
 
 Example
 -------
-    >> XORseed(Math.floor(Math.random() * (256 - 1 + 1))) // 0..256
-    >> XORshift128()
+
+    >> XORseed(Math.floor(Math.random() * (256 - 1 + 1))); // Random seed, this can be anything, if it isn't set this function will be run the first time you use one of the functions below.
+    >> XORshift128();
     1293043013
-    >> XORshift128()
-    858113642
-    >> XORshift128()
-    63207891
-    >> XORshift128()
-    1547141889
-    >> XORshift128()
-    1362877356
+    >> XORshift128Range(0, 10);
+    6
+    >> XORshift128Range(0, 10);
+    [5, 7, 0, 4, 2, 7, 6, 0, 10, 6]
